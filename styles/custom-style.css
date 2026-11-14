@@ -29,6 +29,18 @@ html::-webkit-scrollbar {
     --navbar-hover-color: light-dark(#282828, #d5d5d5);
 }
 
+/* Letter Spacing */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p, .p,
+a, .a {
+  letter-spacing: -0.05em; /* Adjust to your preferred value */
+}
+
 /* Hide light-mode elements when in dark mode */
 [data-bs-theme=dark] .display-light {
     display: none;
@@ -38,13 +50,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-/* ================= NAVBAR ================= */
-
-/* Allows the navbar container to span the full available width */
-.nav-custom .container {
-    max-width: 100%;
-    padding: 10px 40px 10px 40px ;
-}
+/* ============================= NAVBAR ============================= */
 
 .navbar-brand img{
     height: 50px;
@@ -75,3 +81,29 @@ html::-webkit-scrollbar {
 #mainNav .drawer-header{
     background-color: var(--bs-navbar-bg);
 }
+
+/* ============================= HERO ============================= */
+
+header {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header .container-fluid {
+    background-color: light-dark( #f8f9fc, #0e0e0e);
+}
+
+header .btn-primary {
+    color: light-dark( #ffffff, #000000);
+    background-color: light-dark( #434343, #bcbcbc);
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+}
+
