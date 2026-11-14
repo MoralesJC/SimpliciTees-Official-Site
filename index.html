@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpliciTees</title>
+
+    <!-- Bootstrap 6 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+    <!-- Custom-style CSS -->
+    <link href="styles/custom-style.css" rel="stylesheet">
+</head>
+
+<!-- d-flex + flex-column + min-vh-100 lets the footer stick to the bottom on short pages -->
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ================= NAVBAR ================= -->
+     <!-- fixed-top = locks the navbar to the top of the screen -->
+    <nav class="navbar md:navbar-expand fixed-top nav-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="display-light" src="images/logos/secondary_light.png" alt="SimpliciTees Logo Light">
+                <img class="display-dark" src="images/logos/secondary_dark.png" alt="SimpliciTees Logo Dark">
+            </a>
+
+            <button class="btn-icon navbar-toggler" type="button"
+                    data-bs-toggle="drawer" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+
+            <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+                <div class="drawer-header">
+                    <h4 class="drawer-title" id="mainNavLabel">Menu</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                    
+                <!-- Replace # with respective html file -->
+                <div class="drawer-body">
+                    <ul class="nav navbar-nav md:ms-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    
+
+    <!-- Bootstrap 6 JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    
+    <!-- 
+    Automatically detects and applies the user's preferred light/dark theme 
+    Also updates theme-dependent elements based on the user's system preference
+    -->
+    <script src="js/usertheme.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Imports the SimpliciTees Brand Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+Removes the gap on the right side by hiding the
+browser's scrollbar to prevent unwanted horizontal spacing.
+
+Workaround for a Bootstrap 6.0 layout issue.
+https://github.com/twbs/bootstrap/issues/43043
+*/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bootstrap 6 global theme variable overrides */
+:root {
+    /* Theme colors */
+    --bs-bg-body: light-dark(#ffffff, #000000);
+    --bs-fg-body: light-dark(#000000, #ffffff);
+
+    /* Typography */
+    --bs-body-font-family: "Work Sans", Arial, sans-serif;
+    --heading-font-family: "DM Sans", Arial, sans-serif;
+
+    /* Navbar */
+    --bs-navbar-bg: light-dark(#e6e6e6, #191919);
+    --navbar-color: light-dark(#696969, #989898);
+    --navbar-active-color: light-dark(#000000, #ffffff);
+    --navbar-hover-color: light-dark(#282828, #d5d5d5);
+}
+
+/* Hide light-mode elements when in dark mode */
+[data-bs-theme=dark] .display-light {
+    display: none;
+}
+/* Hide dark-mode elements when in light mode */
+[data-bs-theme=light] .display-dark {
+    display: none;
+}
+
+/* ================= NAVBAR ================= */
+
+/* Allows the navbar container to span the full available width */
+.nav-custom .container {
+    max-width: 100%;
+    padding: 10px 40px 10px 40px ;
+}
+
+.navbar-brand img{
+    height: 50px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.navbar ul li a{
+    color: var(--navbar-color);
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--navbar-active-color);
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--navbar-hover-color);
+}
+
+/* Navbar Drawer */
+#mainNav {
+    background-color: var(--bs-bg-body);
+}
+
+#mainNav .drawer-header{
+    background-color: var(--bs-navbar-bg);
+}
