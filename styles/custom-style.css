@@ -12,11 +12,11 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-/* Bootstrap 6 global theme variable overrides */
+/* Global theme variable overrides */
 :root {
     /* Theme colors */
     --bs-bg-body: light-dark(#ffffff, #000000);
-    --bs-fg-body: light-dark(#000000, #ffffff);
+    --bs-fg-body: light-dark(#000000, #e0e0e0);
 
     /* Typography */
     --bs-body-font-family: "Work Sans", Arial, sans-serif;
@@ -25,8 +25,12 @@ html::-webkit-scrollbar {
     /* Navbar */
     --bs-navbar-bg: light-dark(#e6e6e6, #191919);
     --navbar-color: light-dark(#696969, #989898);
-    --navbar-active-color: light-dark(#000000, #ffffff);
+    --navbar-active-color: light-dark(#000000, #e0e0e0);
     --navbar-hover-color: light-dark(#282828, #d5d5d5);
+
+    /* Footer */
+    --footer-color: light-dark(#e6e6e6, #989898);
+    --footer-hover-color: light-dark(#ffffff, #d5d5d5);
 }
 
 /* Letter Spacing */
@@ -38,7 +42,7 @@ h5, .h5,
 h6, .h6,
 p, .p,
 a, .a {
-  letter-spacing: -0.05em; /* Adjust to your preferred value */
+  letter-spacing: -0.03em;
 }
 
 /* Hide light-mode elements when in dark mode */
@@ -84,6 +88,8 @@ a, .a {
 
 /* ============================= HERO ============================= */
 
+/* --------------------------- Homepage --------------------------- */
+
 header {
     padding-left: 30px;
     padding-right: 30px;
@@ -98,12 +104,108 @@ header .btn-primary {
     background-color: light-dark( #434343, #bcbcbc);
 }
 
-.hero-title {
+.home-hero-title {
     font-size: clamp(2rem, 5vw, 4.5rem);
-    font-weight: 600;
 }
 
-.hero-description {
+.home-hero-description {
     font-size: clamp(0.875rem, 1.5vw, 1.25rem);
 }
 
+/* ============================= BODY ============================= */
+
+.home-m-custom {
+    margin-top: clamp(5rem, 8vw, 10rem);
+}
+
+/* --------------------------- Homepage --------------------------- */
+
+/* Featured Shirts Section */
+
+.fs-border-color {
+    border-color: light-dark( #f2f4fC, #1f1f1f);
+}
+
+.home-fs-subtitle {
+    color: light-dark( #5a5a5a, #a5a5a5);
+    font-size: clamp(0.8rem, 1.4vw, 1.1rem);
+    letter-spacing: 0.15em;
+}
+
+.home-fs-header {
+    font-size: clamp(1.75rem, 4.5vw, 3.5rem);
+}
+
+/* Why Choose Us Section */
+
+.feature-item {
+    border-left: 5px solid transparent;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0.45;
+    transition: opacity 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+}
+
+/* 1. Default active state (for the first item) when nothing in the list is hovered */
+.feature-list:not(:has(.feature-item:hover)) .feature-item:first-child,
+  
+/* Active state for whichever item is currently being hovered */
+.feature-item:hover {
+    opacity: 1;
+    border-left-color: #4a4a4a;
+}
+
+/* Customer Reviews Section */
+
+.cr-bg-color {
+    background-color: light-dark( #f8f9fc, #0e0e0e);
+}
+
+.cr-card-color {
+    background-color: light-dark( #e6e6e6, #191919);
+}
+
+.cr-text-color {
+    color: light-dark( #5a5a5a, #a5a5a5);
+}
+
+/* ============================= FOOTER ============================= */
+
+footer {
+    color: var(--footer-color);
+    background-color: light-dark( #666666, #0e0e0e);
+}
+
+footer a{
+    color: var(--footer-color);
+}
+
+footer a:hover {
+    color: var(--footer-hover-color);
+}
+
+/* ============================= MEDIA QUERIES ============================= */
+
+/* --------------------------- Homepage --------------------------- */
+
+/* Centers the shop now button on the hero for tablet-sized screens (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Why Choose Us Section */
+
+/* Tablet and mobile touch responsiveness*/
+@media (hover: none) and (pointer: coarse) {
+    .feature-item {
+        opacity: 0.45;
+        min-height: 80px;
+        padding: 1.25rem 1rem;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
