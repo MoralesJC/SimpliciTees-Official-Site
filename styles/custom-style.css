@@ -146,18 +146,18 @@ header .btn-primary {
 }
 
 .ppo-hero-description {
-    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    font-size: clamp(0.75rem, 1.8vw, 1.2rem);
     letter-spacing: 0.15em;
 }
 
 /* --------------------------- Terms of Service --------------------------- */
 
 .tos-hero-title {
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-size: clamp(2.3rem, 6vw, 5.2rem);
 }
 
 .tos-hero-description {
-    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-size: clamp(0.75rem, 2vw, 1.35rem);
     letter-spacing: 0.15em;
 }
 
