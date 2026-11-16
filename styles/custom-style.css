@@ -88,6 +88,16 @@ a, .a {
 
 /* ============================= HERO ============================= */
 
+.general-hero {
+    width: 100%;
+    min-height: 400px;
+    background-color: light-dark( #5c5c5c, #0f0f0f);
+}
+
+.general-hero-foreground {
+    color: #e0e0e0;
+}
+
 /* --------------------------- Homepage --------------------------- */
 
 header {
@@ -95,13 +105,13 @@ header {
     padding-right: 30px;
 }
 
-header .container-fluid {
-    background-color: light-dark( #f8f9fc, #0e0e0e);
-}
-
 header .btn-primary {
     color: light-dark( #ffffff, #000000);
     background-color: light-dark( #434343, #bcbcbc);
+}
+
+.home-hero .container-fluid {
+    background-color: light-dark( #f8f9fc, #0e0e0e);
 }
 
 .home-hero-title {
@@ -110,6 +120,45 @@ header .btn-primary {
 
 .home-hero-description {
     font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+}
+
+/* --------------------------- Shop --------------------------- */
+
+.shop-hero {
+    width: 100%;
+    min-height: 400px;
+    background-color: #000000;
+}
+
+.shop-hero-title {
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
+}
+
+.shop-hero-description {
+    font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+    letter-spacing: 0.15em;
+}
+
+/* --------------------------- Privacy Policy --------------------------- */
+
+.ppo-hero-title {
+    font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+}
+
+.ppo-hero-description {
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    letter-spacing: 0.15em;
+}
+
+/* --------------------------- Terms of Service --------------------------- */
+
+.tos-hero-title {
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+}
+
+.tos-hero-description {
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    letter-spacing: 0.15em;
 }
 
 /* ============================= BODY ============================= */
@@ -200,12 +249,19 @@ footer a:hover {
 
 /* Why Choose Us Section */
 
-/* Tablet and mobile touch responsiveness*/
+/* Tablet and mobile touch responsiveness */
 @media (hover: none) and (pointer: coarse) {
     .feature-item {
         opacity: 0.45;
         min-height: 80px;
         padding: 1.25rem 1rem;
         -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Increase hero height for larger screens */
+@media (min-width: 768px) {
+    .hero-query {
+        min-height: 550px;
     }
 }
