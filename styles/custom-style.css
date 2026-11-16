@@ -131,11 +131,11 @@ header .btn-primary {
 }
 
 .shop-hero-title {
-    font-size: clamp(2rem, 4.5vw, 3.8rem);
+    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
 }
 
 .shop-hero-description {
-    font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+    font-size: clamp(0.6rem, 1.6vw, 1.05rem);
     letter-spacing: 0.15em;
 }
 
