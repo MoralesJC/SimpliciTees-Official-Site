@@ -1,5 +1,3 @@
-    <!-- Order and page logic -->
-    <script>
         const ORDERS_EMAIL = "orders@examplewebsite142.com";
         const PRODUCT_NAME = "Don't Be Late Tee";
         const UNIT_PRICE = 499;
@@ -116,4 +114,3 @@
         });
 
         buildOrder();
-    </script>
