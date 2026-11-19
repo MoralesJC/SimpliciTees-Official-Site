@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="styles/custom-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -206,38 +206,44 @@
             </details>
         </section>
 
-        <!-- YOU MAY ALSO LIKE -->
-        <section class="mt-12" aria-labelledby="alsoLikeHeading">
-            <h2 class="fw-semibold mb-7" id="alsoLikeHeading">You may also like</h2>
+        <!-- YOU MAY ALSO LIKE SECTION -->
+    <section class="mt-5 pt-4" aria-labelledby="alsoLikeHeading">
+        <h2 class="also-like-heading mb-4" id="alsoLikeHeading">You may also like</h2>
 
-            <div class="row g-7">
-                <div class="col-12 sm:col-6 lg:col-3">
-                    <div class="card text-center h-100 border-0 related-card">
-                        <a href="#" class="text-decoration-none">
-                            <img class="display-light card-img-top img-fluid" src="images/placeholder_light.jpg" alt="Everyday Comfort Tee">
-                            <img class="display-dark card-img-top img-fluid" src="images/placeholder_dark.jpg" alt="Everyday Comfort Tee">
-                        </a>
-                        <div class="card-body">
-                            <h3 class="fw-semibold fs-md">Everyday Comfort Tee</h3>
-                            <p class="card-text fs-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <article class="card text-center h-100 border-0 bg-transparent related-card">
+                <a href="#" class="text-decoration-none text-reset related-card-link">
+                    <div class="related-image-box">
+                        <img class="display-light img-fluid" src="images/placeholder_light.jpg" alt="" aria-hidden="true">
+                        <img class="display-dark img-fluid" src="images/placeholder_dark.jpg" alt="" aria-hidden="true">
                     </div>
-                </div>
+                    <div class="card-body px-2 pt-3 pb-0">
+                        <h3 class="related-title">Everyday Comfort Tee</h3>
+                        <p class="related-desc mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit tempore accusamus quo aute est aut in et excepturi ullamco assumenda dolorum.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
 
-                <div class="col-12 sm:col-6 lg:col-3">
-                    <div class="card text-center h-100 border-0 related-card">
-                        <a href="#" class="text-decoration-none">
-                            <img class="display-light card-img-top img-fluid" src="images/placeholder_light.jpg" alt="Do Good Work Tee">
-                            <img class="display-dark card-img-top img-fluid" src="images/placeholder_dark.jpg" alt="Do Good Work Tee">
-                        </a>
-                        <div class="card-body">
-                            <h3 class="fw-semibold fs-md">Do Good Work Tee</h3>
-                            <p class="card-text fs-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+            <article class="card text-center h-100 border-0 bg-transparent related-card">
+                <a href="#" class="text-decoration-none text-reset related-card-link">
+                    <div class="related-image-box">
+                        <img class="display-light img-fluid" src="images/placeholder_light.jpg" alt="" aria-hidden="true">
+                        <img class="display-dark img-fluid" src="images/placeholder_dark.jpg" alt="" aria-hidden="true">
                     </div>
-                </div>
-            </div>
-        </section>
+                    <div class="card-body px-2 pt-3 pb-0">
+                        <h3 class="related-title">Do Good Work Tee</h3>
+                        <p class="related-desc mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit tempore accusamus quo aute est aut in et excepturi ullamco assumenda dolorum.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+    </section>
     </main>
 
     <!-- FOOTER: pasted the <footer> block from Josh's index.html -->
@@ -329,7 +335,7 @@
         const PRODUCT_NAME = "Don't Be Late Tee";
         const UNIT_PRICE = 499;
         const MIN_QTY = 1;
-        const MAX_QTY = 10;
+        const MAX_QTY = 5;
 
         const qtyInput = document.getElementById("quantity");
         const buyNow = document.getElementById("buyNow");
