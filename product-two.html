@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Everyday Comfort Tee | Product Page</title>
+
+    <!-- Bootstrap 6 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="styles/custom-style.css" rel="stylesheet">
+
+    <!-- Light and dark theme (same file as shop.html) -->
+    <script src="js/usertheme.js"></script>
+</head>
+
+<body class="product-page">
+
+   <!-- 
+    ============================= NAVBAR =============================
+
+    sticky-top = keeps the navbar fixed at the top of the viewport when scrolling 
+    md:navbar-expand = navbar expands on medium screens and larger,
+    collapses into a hamburger menu on smaller screens
+
+    -->
+    <nav class="navbar md:navbar-expand sticky-top">
+        <div class="container-fluid px-11 py-4">
+            <a class="navbar-brand" href="index.html">
+                <img class="display-light" src="images/logos/secondary_light.png" alt="SimpliciTees Logo Light">
+                <img class="display-dark" src="images/logos/secondary_dark.png" alt="SimpliciTees Logo Dark">
+            </a>
+            
+            <!-- Navbar Hamburger Button -->
+            <button class="btn-icon navbar-toggler" type="button"
+                    data-bs-toggle="drawer" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button> 
+            
+            <!-- Navbar drawer - appears when the navbar hamburger button is clicked -->
+            <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+                <div class="drawer-header">
+                    <h4 class="drawer-title" id="mainNavLabel"> Menu </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                
+                
+                <!-- Navbar drawer content (Replace # with respective html file) -->
+                <div class="drawer-body">
+                    <ul class="nav navbar-nav md:ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="shop.html"> Shop </a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <!-- PRODUCT SECTION -->
+    <main class="product-preview container">
+
+        <div class="row g-4 lg:g-8 align-items-start">
+
+            <!-- IMAGE GALLERY: large image with arrows, thumbnails below -->
+            <div class="col-12 lg:col-6">
+
+                <div class="product-image-preview">
+                    <figure class="product-slide">
+                        <img src="images/products/everday_comfort.png" class="product-image" alt="Everyday Comfort T-shirt">
+                    </figure>
+                    <!-- Slides 2 and 3 are placeholders. Replace the src with real photos. -->
+                    <figure class="product-slide" hidden>
+                        <img src="images/placeholder_light.jpg" class="product-image display-light" alt="Placeholder for a second view of the Don't Be Late T-shirt">
+                        <img src="images/placeholder_dark.jpg" class="product-image display-dark" alt="Placeholder for a second view of the Don't Be Late T-shirt">
+                    </figure>
+                    <figure class="product-slide" hidden>
+                        <img src="images/placeholder_light.jpg" class="product-image display-light" alt="Placeholder for a third view of the Don't Be Late T-shirt">
+                        <img src="images/placeholder_dark.jpg" class="product-image display-dark" alt="Placeholder for a third view of the Don't Be Late T-shirt">
+                    </figure>
+
+                    <button type="button" class="carousel-btn carousel-prev" id="prevSlide" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="carousel-btn carousel-next" id="nextSlide" aria-label="Next image">&rsaquo;</button>
+                </div>
+
+                <div class="product-thumbs" role="group" aria-label="Choose a product image">
+                    <button type="button" class="product-thumb" aria-label="Show image 1">
+                        <img src="images/products/dont_be_late.png" alt="">
+                    </button>
+                    <button type="button" class="product-thumb" aria-label="Show image 2">
+                        <img class="display-light" src="images/placeholder_small_light.jpg" alt="">
+                        <img class="display-dark" src="images/placeholder_small_dark.jpg" alt="">
+                    </button>
+                    <button type="button" class="product-thumb" aria-label="Show image 3">
+                        <img class="display-light" src="images/placeholder_small_light.jpg" alt="">
+                        <img class="display-dark" src="images/placeholder_small_dark.jpg" alt="">
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- INFORMATION -->
+            <div class="col-12 lg:col-6 product-information">
+
+                <p class="product-breadcrumb"><a href="shop.html">Shop</a> &rsaquo; <span aria-current="page">Everyday Comfort Tee</span></p>
+
+                <h1>Everyday Comfort Tee</h1>
+
+                <!-- Static text for the mockup -->
+                <p class="product-rating">
+                    <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="visually-hidden">Rated 4 out of 5 stars.</span>
+                    (11 reviews)
+                </p>
+
+                <h4 class="product-price">&#8369;499.00</h4>
+
+                <p class="shipping-info">
+                    <a href="#shippingDetails" id="shippingLink">Shipping</a> is calculated at checkout.
+                </p>
+
+                <!-- COLOUR OPTIONS -->
+                <fieldset class="mb-7">
+                    <legend class="option-label">Color: <span class="option-value" id="colourName">Warm Sand</span></legend>
+                    <div class="d-flex flex-wrap gap-3">
+                        <label class="colour-swatch" style="background-color: #ffffff;">
+                            <input type="radio" class="visually-hidden" name="colour" value="White">
+                            <span class="visually-hidden">White</span>
+                        </label>
+                        <label class="colour-swatch" style="background-color: #E5D7C0;">
+                            <input type="radio" class="visually-hidden" name="colour" value="Warm Sand" checked>
+                            <span class="visually-hidden">Warm Sand</span>
+                        </label>
+                        <label class="colour-swatch" style="background-color: #C1D0BF;">
+                            <input type="radio" class="visually-hidden" name="colour" value="Sage">
+                            <span class="visually-hidden">Sage</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- SIZE OPTIONS -->
+                <fieldset class="mb-7">
+                    <legend class="option-label">Size</legend>
+                    <div class="d-flex flex-wrap gap-3">
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XS" checked>XS</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="S">S</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="M">M</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="L">L</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XL">XL</label>
+                    </div>
+                </fieldset>
+
+                <!-- QUANTITY -->
+                <div class="mb-9">
+                    <label class="option-label" for="quantity">Quantity</label>
+                    <div class="qty-stepper">
+                        <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+                    </div>
+                </div>
+
+                <!-- BUY NOW: a mailto link, so it opens the customer's email app -->
+                <a class="buy-now"
+                   id="buyNow"
+                   href="mailto:orders@examplewebsite142.com"
+                   aria-label="Buy now. Opens your email app with your order details">
+                    BUY NOW
+                </a>
+
+                <!-- Shown after BUY NOW is clicked, in case no email app opens -->
+                <div class="mail-notice" id="mailNotice" role="status" hidden>
+                    <p class="mb-3">
+                        Your email app should now be open with your order ready to send to
+                        <a href="mailto:orders@examplewebsite142.com">orders@examplewebsite142.com</a>.
+                        Add your name, mobile number, and delivery address, then press Send.
+                    </p>
+                    <p class="mb-3">Nothing opened? Copy the order below and email it to the address above.</p>
+                    <label class="visually-hidden" for="orderText">Order details</label>
+                    <textarea class="form-control mb-3" id="orderText" rows="9" readonly></textarea>
+                    <button type="button" class="btn-copy" id="copyOrder">Copy order details</button>
+                    <span class="fs-sm ms-3" id="copyStatus" role="status"></span>
+                </div>
+
+                <!-- ABOUT, CARE GUIDE, SHIPPING, RETURNS -->
+                <section class="faq-list" aria-label="Product information">
+                    <details class="faq-item" open>
+                        <summary>About This Design</summary>
+                        <div class="faq-body"><p>A comfortable and stylish T-shirt perfect for everyday wear.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Care Guide</summary>
+                        <div class="faq-body">
+                            <ul>
+                                <li>Machine wash cold (30 to 40 &deg;C), inside out, with like colors</li>
+                                <li>Do not dry clean or bleach</li>
+                                <li>Do not tumble dry</li>
+                                <li>Iron on reverse, if needed</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="faq-item" id="shippingDetails">
+                        <summary>Shipping</summary>
+                        <div class="faq-body"><p>Orders are processed within 2 business days. Shipping fees are calculated at checkout. Sales tax may apply depending on your location. For international shipping, we cannot guarantee delivery timing due to customs clearance.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Returns</summary>
+                        <div class="faq-body"><p>Don't love your SimpliciTees shirt? We accept returns within 30 days of purchase. Item must be unworn and in its original packaging. For international returns, we charge 20 USD to cover shipping and restocking. Duties and taxes are not refunded for international returns.</p></div>
+                    </details>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- YOU MAY ALSO LIKE SECTION -->
+        <section class="also-like" aria-labelledby="alsoLikeHeading">
+            <h2 class="also-like-heading mb-6" id="alsoLikeHeading">You may also like</h2>
+
+            <div class="row g-6">
+                <!-- Card 1 -->
+                <div class="col-6 md:col-3">
+                    <article class="related-card">
+                        <a href="/product-one.html" class="related-card-link text-decoration-none text-reset">
+                            <div class="related-image-box">
+                                <img src="images/products/don_t_be_late.png" alt="">
+                            </div>
+                            <h3 class="related-title">Don't Be Late Tee</h3>
+                            <p class="related-desc">A friendly reminder you can wear. Comes in white, dark grey, and brown, so there’s an easy match for busy weekdays and slow weekends.</p>
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-6 md:col-3">
+                    <article class="related-card">
+                        <a href="/product-three.html" class="related-card-link text-decoration-none text-reset">
+                            <div class="related-image-box">
+                                <img src="images/products/do_good_work.png" alt="">
+                            </div>
+                            <h3 class="related-title">Do Good Work Tee</h3>
+                            <p class="related-desc">A simple message for anyone who takes pride in what they do. Deep black fabric with an understated design, perfect for work or class.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: pasted the <footer> block from Josh's index.html -->
+    <footer class="py-12">
+        <div class="container">
+            
+            <!-- Row 1: Logo | Navigation | Social Icons -->
+            <div class="row align-items-center gy-4 pb-8">
+                
+                <!-- Column 1: Brand Logo -->
+                <div class="col-12 md:col-4 text-center md:text-start">
+                    <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none">
+                        <!-- Replace with your actual logo <img> or <svg> -->
+                        <img src="images/logos/secondary_dark.png" alt="SimpliciTees" height="48">
+                    </a>
+                </div>
+
+                <!-- Column 2: Navigation Links -->
+                <div class="col-12 md:col-4">
+                    <ul class="list-unstyled d-flex justify-content-center gap-6 gap-lg-10 mb-0">
+                        <li><a href="index.html" class="text-decoration-none"> Home</a></li>
+                        <li><a href="about.html" class="text-decoration-none"> About </a></li>
+                        <li><a href="shop.html" class="text-decoration-none"> Shop </a></li>
+                        <li><a href="contact.html" class="text-decoration-none"> Contact </a></li>
+                    </ul>
+                </div>
+
+                <!-- 
+                Column 3: Social Media Icons
+                Currently using inline SVGs for social media icons. Replace when the layout is finalized.
+                 -->
+                <div class="col-12 md:col-4">
+                    <div class="d-flex justify-content-center md:justify-content-end gap-2">
+                        <!-- Facebook -->
+                        <a href="#" aria-label="Facebook" class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center text-decoration-none" style="width: 32px; height: 32px; color: #666666;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" aria-label="Instagram" class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center text-decoration-none" style="width: 32px; height: 32px; color: #666666;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="#" aria-label="TikTok" class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center text-decoration-none" style="width: 32px; height: 32px; color: #666666;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#" aria-label="YouTube" class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center text-decoration-none" style="width: 32px; height: 32px; color: #666666;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Horizontal Divider Line -->
+            <hr class="border-white border-3 opacity-75 my-0">
+
+            <!-- Row 2: Legal Links, Copyright Text -->
+            <div class="d-flex flex-column md:flex-row justify-content-between align-items-center gap-3 pt-6 small">
+
+                <div class="d-flex gap-8">
+                    <a href="tos.html" class="text-white text-decoration-none opacity-75-hover"> Terms of Service </a>
+                    <a href="privacy-policy.html" class="text-white text-decoration-none opacity-75-hover"> Privacy Policy </a>
+                </div>
+
+                <p class="my-0"> &copy; 2026 SimpliciTees. All rights reserved. </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap 6 JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    <!-- Mailto button script -->
+    <script src="js/mailto.js" defer></script>
+</body>
+</html>
+
