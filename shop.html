@@ -62,7 +62,8 @@
     <header class="shop-hero hero-query position-relative d-flex align-items-center overflow-hidden">
         
         <!-- Background -->
-        <img class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0 opacity-50" src="images/placeholder_color.jpg" alt="Shop hero background">
+        <img class="display-light position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0 opacity-50" src="images/banners/shop_hero_light.png" alt="Shop hero background">
+        <img class="display-dark position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-0 opacity-25" src="images/banners/shop_hero_light.png" alt="Shop hero background">
 
         <!-- Foreground -->
         <div class="general-hero-foreground container-fluid px-4 md:px-11 py-5 md:py-12 position-relative z-2 text-center lg:text-start">
@@ -73,100 +74,103 @@
     </header>
 
 <!-- ============================= BODY ============================= -->
-    <main class="container home-mb-custom mt-12">
+    <main>
         
         <!-- Row 1: Featured Shirts Section, three equal columns, stacks on phones -->
-        <div class="row g-4 g-md-6 g-lg-8 mb-5 mt-12" id="features">
+        <section class="fs-section py-12" id="features">
+            <div class="container">
+                <div class="row g-4 g-md-6 g-lg-8">
+                            
+                    <!-- Header -->
+                    <div class="text-center mb-5">
+                        <h2 class="home-fs-header fw-semibold mb-12"> Shop Our Collection </h2>
+                    </div>
 
-            <!-- Header -->
-            <div class="text-center mb-5">
-                <h2 class="home-fs-header fw-semibold mb-12"> Shop Our Collection </h2>
-            </div>
+                    <!-- Column 1 = Card 1 -->
+                    <div class="col-12 md:col-4">
+                        <div class="card text-center h-100 fs-border-color border-3">
 
-            <!-- Column 1 = Card 1 -->
-            <div class="col-12 md:col-4">
-                <div class="card text-center h-100 fs-border-color border-3">
-                    
-                    <!-- Top Image -->
-                    <a href="#Shirt-1" class="fg-1 text-decoration-none">
-                        <img class="display-light card-img-top img-fluid" src="images/placeholder_light.jpg" alt="Don't Be Late Tee">
-                        <img class="display-dark card-img-top img-fluid" src="images/placeholder_dark.jpg" alt="Don't Be Late Tee">
-                    </a>
-                    
-                    <!-- Bottom Text -->
-                    <div class="card-body">
-                            <h3 class="fw-semibold"> Don't Be Late Tee </h3>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
-                        </p>
+                            <!-- Top Image -->
+                            <a href="#Shirt-1" class="fg-1 text-decoration-none">
+                                <img class="fs-img-bg  card-img-top img-fluid" src="images/products/dont_be_late.png" alt="Don't Be Late Tee">
+                            </a>
+
+                            <!-- Bottom Text -->
+                            <div class="fs-card-bg card-body">
+                                <h3 class="fw-semibold pb-4"> Don't Be Late Tee </h3>
+                                <p class="card-text">
+                                    A lighthearted nod to busy schedules. Breathable white cotton topped with an artistic green print that keeps your look fresh on the fly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 = Card 2 -->
+                    <div class="col-12 md:col-4">
+                        <div class="card text-center h-100 fs-border-color border-3">
+
+                            <!-- Top Image -->
+                            <a href="#Shirt-2" class="fg-1 text-decoration-none">
+                                <img class="fs-img-bg card-img-top img-fluid" src="images/products/everyday_comfort.png" alt="Everyday Comfort Tee">
+                            </a>
+
+                            <!-- Bottom Text -->
+                            <div class="fs-card-bg card-body">
+                                <h3 class="fw-semibold pb-4"> Everyday Comfort Tee </h3>
+                                <p class="card-text">
+                                    Simplicity at its finest. Crafted in timeless heather grey for effortless comfort from morning coffee to late-night lounging.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 = Card 3 -->
+                    <div class="col-12 md:col-4">
+                        <div class="card text-center h-100 fs-border-color border-3">
+
+                            <!-- Top Image -->
+                            <a href="#Shirt-3" class="fg-1 text-decoration-none">
+                                <img class="fs-img-bg card-img-top img-fluid" src="images/products/do_good_work.png" alt="Do Good Work Tee">
+                            </a>
+
+                            <!-- Bottom Text -->
+                            <div class="fs-card-bg card-body">
+                                <h3 class="fw-semibold pb-4"> Do Good Work Tee </h3>
+                                <p class="card-text">
+                                    Understated motivation you can wear. Deep black fabric accented with a clean pocket-sized motif for low-key daily hustle.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Column 2 = Card 2 -->
-            <div class="col-12 md:col-4">
-                <div class="card text-center h-100 fs-border-color border-3">
-                    
-                    <!-- Top Image -->
-                    <a href="#Shirt-2" class="fg-1 text-decoration-none">
-                        <img class="display-light card-img-top img-fluid" src="images/placeholder_light.jpg" alt="Everyday Comfort Tee">
-                        <img class="display-dark card-img-top img-fluid" src="images/placeholder_dark.jpg" alt="Everyday Comfort Tee">
-                    </a>
-                    
-                    <!-- Bottom Text -->
-                    <div class="card-body">
-                            <h3 class="fw-semibold"> Everyday Comfort Tee </h3>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Column 3 = Card 3 -->
-            <div class="col-12 md:col-4">
-                <div class="card text-center h-100 fs-border-color border-3">
-                    
-                    <!-- Top Image -->
-                    <a href="#Shirt-3" class="fg-1 text-decoration-none">
-                        <img class="display-light card-img-top img-fluid" src="images/placeholder_light.jpg" alt="Do Good Work Tee">
-                        <img class="display-dark card-img-top img-fluid" src="images/placeholder_dark.jpg" alt="Do Good Work Tee">
-                    </a>
-                    
-                    <!-- Bottom Text -->
-                    <div class="card-body">
-                            <h3 class="fw-semibold"> Do Good Work Tee </h3>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <!-- Row 2 = Customer Reviews List -->
-        <div class="row g-4 g-md-6 g-lg-8 cr-bg-color home-m-custom rounded mb-12 px-8 py-12" id="customer-reviews">
+        <div class="row g-5 lg:g-8 home-m-custom m-12" id="customer-reviews">
 
             <!-- Header -->
             <div class="text-center mb-5">
-                <h2 class="home-fs-header fw-semibold mb-12"> What our customers say</h2>
+                <h2 class="home-fs-header fw-semibold mb-12"> What our customers say </h2>
             </div>
 
             <!-- Column 1 = Card 1 -->
             <div class="col-12 md:col-4">
-                <div class="card border-0 cr-card-color h-100 rounded-4 pt-8 pb-12 ps-8 pe-8">
-                    <div class="card-body p-0">
+                <div class="card border-0 cr-card-color cr-card-shape h-100 rounded-4 px-6 py-5">
+                    <div class="card-body p-0 d-flex flex-column">
                         
                         <div class="mb-3">
-                            <img class="display-light rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_light.jpg" alt="Customer 1">
-                            <img class="display-dark rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_dark.jpg" alt="Customer 1">
+                            <img class="display-light rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_light.svg" alt="Customer 1">
+                            <img class="display-dark rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_dark.svg" alt="Customer 1">
                         </div>
                         
-                        <h3>★★★★☆</h3>
+                        <h3 class="ratings">★★★★☆</h3>
 
                         <p class="card-text cr-text-color mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
+                            <i>"Hands down my new daily go-to. Super soft right out of the package, waiting for more designs!"</i>
                         </p>
+
+                        <h5 class="fw-500 my-3">John Smith</h5>
 
                     </div>
                 </div>
@@ -174,19 +178,21 @@
 
             <!-- Column 2 = Card 2 -->
             <div class="col-12 md:col-4">
-                <div class="card border-0 cr-card-color h-100 rounded-4 pt-8 pb-12 ps-8 pe-8">
-                    <div class="card-body p-0">
+                <div class="card border-0 cr-card-color cr-card-shape h-100 rounded-4 px-6 py-5">
+                    <div class="card-body p-0 d-flex flex-column">
                         
                         <div class="mb-3">
-                            <img class="display-light rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_light.jpg" alt="Customer 2">
-                            <img class="display-dark rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_dark.jpg" alt="Customer 2">
+                            <img class="display-light rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_light.svg" alt="Customer 2">
+                            <img class="display-dark rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_dark.svg" alt="Customer 2">
                         </div>
                         
-                        <h3>★★★★☆</h3>
+                        <h3 class="ratings">★★★★☆</h3>
 
                         <p class="card-text cr-text-color mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
+                            <i>"Clean print, zero shrinkage in the wash, and feels great all day. Hoping that you guys make long-sleeves soon!” </i>
                         </p>
+
+                        <h5 class="fw-500 my-3">Alice young</h5>
 
                     </div>
                 </div>
@@ -194,19 +200,21 @@
 
             <!-- Column 3 = Card 3 -->
             <div class="col-12 md:col-4">
-                <div class="card border-0 cr-card-color h-100 rounded-4 pt-8 pb-12 ps-8 pe-8">
-                    <div class="card-body p-0">
+                <div class="card border-0 cr-card-color cr-card-shape h-100 rounded-4 px-6 py-5">
+                    <div class="card-body p-0 d-flex flex-column">
                         
                         <div class="mb-3">
-                            <img class="display-light rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_light.jpg" alt="Customer 3">
-                            <img class="display-dark rounded-3 object-fit-cover" style="width: 56px; height: 56px;" src="images/placeholder_small_dark.jpg" alt="Customer 3">
+                            <img class="display-light rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_light.svg" alt="Customer 3">
+                            <img class="display-dark rounded-3 object-fit-cover" style="width: 72px; height: 72px;" src="images/icons/customer_profile_dark.svg" alt="Customer 3">
                         </div>
                         
-                        <h3>★★★★★</h3>
+                        <h3 class="ratings">★★★★★</h3>
 
                         <p class="card-text cr-text-color mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius elementum tristique.
+                            <i>"Finally, a shirt that actually holds its shape after washing. Fits true to size and feels so comfortable!"</i>
                         </p>
+
+                        <h5 class="fw-500 my-3">James House</h5>
 
                     </div>
                 </div>

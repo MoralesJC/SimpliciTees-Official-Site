@@ -121,7 +121,7 @@ header .btn-primary {
 }
 
 .home-hero .container-fluid {
-    background-color: light-dark( #fffdf8, #262116);
+    background-color: light-dark(#fffdf8, #262116);
 }
 
 .home-hero-title {
@@ -137,16 +137,20 @@ header .btn-primary {
 .shop-hero {
     width: 100%;
     min-height: 400px;
-    background-color: #000000;
+    background-color: light-dark(#63543e, #1f1506);
 }
 
 .shop-hero-title {
+    color: light-dark(#ffffff, #b2ad9d);
     font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    text-align: center;
 }
 
 .shop-hero-description {
+    color: light-dark(#ffffff, #b2ad9d);
     font-size: clamp(0.6rem, 1.6vw, 1.05rem);
     letter-spacing: 0.15em;
+    text-align: center;
 }
 
 /* --------------------------- Privacy Policy --------------------------- */
@@ -307,8 +311,6 @@ footer a:hover {
         min-height: 550px;
     }
 }
-
-
 
 /* --------------------------- Product Page --------------------------- */
 
