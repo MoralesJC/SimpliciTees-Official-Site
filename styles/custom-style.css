@@ -897,3 +897,91 @@ footer a:hover {
     border-left: 3px solid var(--brand-tan);
     background-color: var(--brand-tan-soft);
 }
+
+
+/* --------------------------- About Page --------------------------- */
+
+.about-page {
+    --line-color: light-dark(#808080, #5a5a5a);
+    --muted-text: light-dark(#5a5a5a, #a5a5a5);
+    color: var(--bs-fg-body);
+    padding-block: 4rem 6rem;
+}
+
+/* Brand and team rows */
+.about-row + .about-row {
+    margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-eyebrow {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--muted-text);
+}
+
+.about-heading {
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin-bottom: 1.25rem;
+}
+
+.about-row p:not(.about-eyebrow) {
+    max-width: 30rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* FAQ section */
+.about-faq {
+    max-width: 720px;
+    margin: clamp(5rem, 9vw, 8rem) auto 0;
+    text-align: center;
+}
+
+/* Maroon pill heading, same colours as the homepage button */
+.faq-pill {
+    display: block;
+    max-width: 560px;
+    margin: 0 auto 1.25rem;
+    padding: 0.35rem 1.5rem;
+    border-radius: 999px;
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    color: light-dark(#fff4f2, #b2ad9d);
+    background-color: light-dark(#6f1a07, #531304);
+}
+
+.faq-intro {
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-faq .faq-list {
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.about-faq .faq-item summary {
+    padding: 1rem 0.5rem;
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.about-faq .faq-body {
+    padding-inline: 0.5rem;
+    font-size: 1rem;
+}
