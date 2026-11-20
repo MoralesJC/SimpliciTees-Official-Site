@@ -13,7 +13,7 @@
 </head>
 
 <!-- d-flex + flex-column + min-vh-100 lets the footer stick to the bottom on short pages -->
-<body class="d-flex flex-column min-vh-100">
+<body class="contact-page d-flex flex-column min-vh-100">
 
     <!-- 
     ============================= NAVBAR =============================
@@ -58,54 +58,93 @@
         </div>
     </nav>
     
-    <main class="container my-12">
-      <div class="row justify-content-center">
-        <div class="col-12 md:col-8 lg:col-6">
-          <div class="text-center mb-5">
-            <p class="fw-semibold text-uppercase">Get in touch</p>
-            <h1 class="fw-semibold">Contact Us</h1>
-          </div>
+<main class="container my-8 md:my-12">
+        <div class="row justify-content-center">
+            <div class="col-12 sm:col-10 md:col-8 lg:col-6">
 
-          <form id="contact-form">
-            <div class="mb-4">
-              <label for="name" class="form-label">Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                required
-              />
+                <!-- Hero Heading & Hours -->
+                <div class="text-center mb-6">
+                    <h1 class="fw-bold mb-3">Got questions for our<br>TEEm? We got you!</h1>
+                    <p class="contact-muted pt-8 pb-6"> Our customer support team is available daily from 9am-5pm </p>
+                </div>
+
+                <!-- Direct Contact Channels -->
+                <div class="text-center mb-6">
+                    <h3 class="fw-bold mb-9"> You may contact us via: </h3>
+                    <ul class="list-unstyled d-flex flex-column gap-1 mb-0 contact-channels mb-9">
+                        <li><span class="fw-bold"> Phone: </span> 0917-123-4567 </li>
+                        <li><span class="fw-bold"> Instagram: </span> @simplicitees.ph </li>
+                        <li><span class="fw-bold"> Facebook: </span> @simplicitees.ph </li>
+                        <li><span class="fw-bold"> Email: </span> support@simplicitees.com</li>
+                    </ul>
+                </div>
+
+                <!-- Form Intro -->
+                <h3 class="fw-bold text-center mb-10"> You may also connect with us through this form: </h3>
+
+                <!-- Contact Form -->
+                <form id="contact-form">
+                    <!-- Row 1: Name & Email side-by-side on sm+ -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 sm:col-6">
+                            <label for="name" class="form-label small fw-medium mb-1"> Name </label>
+                            <input
+                                type="text"
+                                class="form-control contact-input rounded-3"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12 sm:col-6">
+                            <label for="email" class="form-label small fw-medium mb-1"> Email </label>
+                            <input
+                                type="email"
+                                class="form-control contact-input rounded-3"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Subject -->
+                    <div class="mb-3">
+                        <label for="subject" class="form-label small fw-medium mb-1"> Subject </label>
+                        <input
+                            type="text"
+                            class="form-control contact-input rounded-3"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter your inquiry type"
+                            required
+                        >
+                    </div>
+
+                    <!-- Row 3: Message -->
+                    <div class="mb-5">
+                        <label for="message" class="form-label small fw-medium mb-1"> Message </label>
+                        <textarea
+                            class="form-control contact-input rounded-3"
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Centered Maroon Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn contact-submit-btn rounded-3 px-6 py-2 fw-semibold"> Submit </button>
+                    </div>
+
+                </form>
             </div>
-
-            <div class="mb-4">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                required
-              />
-            </div>
-
-            <div class="mb-4">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                rows="6"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg rounded-4">
-              Send Message
-            </button>
-          </form>
         </div>
-      </div>
     </main>
 
     <!-- Bootstrap 6 JS -->

@@ -257,6 +257,56 @@ header .btn-primary {
     margin-inline: auto;
 }
 
+/* --------------------------- Contact Page --------------------------- */
+
+.contact-page {
+    background-color: light-dark(#ffffff, #0e0d0c);
+}
+
+.contact-muted {
+    color: light-dark(#4a4a4a, #c7c2b2);
+    font-size: 0.95rem;
+}
+
+.contact-channels {
+    font-size: 0.92rem;
+    color: light-dark(#222222, #e5e0d0);
+}
+
+.contact-input {
+    background-color: light-dark(#f6f5f3, #252018);
+    border: 1px solid light-dark(#9c9b97, #4a4335);
+    color: light-dark(#111111, #f5f2e9);
+    padding: 0.6rem 0.75rem;
+}
+
+.contact-input::placeholder {
+    color: light-dark(#9e9e9e, #8e8878);
+    font-size: 0.85rem;
+}
+
+.contact-input:focus {
+    background-color: light-dark(#f1f0ec, #231e14);
+    border-color: light-dark(#6f1a07, #a8763e);
+    color: light-dark(#111111, #f5f2e9);
+    box-shadow: 0 0 0 0.2rem light-dark(rgba(111, 26, 7, 0.15), rgba(168, 118, 62, 0.25));
+}
+
+.contact-submit-btn {
+    background-color: light-dark(#5c1405, #531304);
+    border: 1px solid light-dark(#5c1405, #531304);
+    color: light-dark(#ffffff, #B2AD9D);
+    min-width: 140px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-submit-btn:hover,
+.contact-submit-btn:focus-visible {
+    background-color: light-dark(#430d03, #94260e);
+    border-color: light-dark(#430d03, #94260e);
+    color: #ffffff;
+}
+
 /* ============================= FOOTER ============================= */
 
 footer {
