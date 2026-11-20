@@ -906,6 +906,16 @@ footer a:hover {
     --muted-text: light-dark(#5a5a5a, #a5a5a5);
     color: var(--bs-fg-body);
     padding-block: 4rem 6rem;
+    /* Space between the content and the left and right edges of the page */
+    padding-inline: clamp(1.25rem, 5vw, 5rem);
+}
+
+/* Space between the image and the text on tablets and desktops.
+   Increase the middle value (4vw) or the last value (4rem) for a wider gap. */
+@media (min-width: 768px) {
+    .about-text {
+        padding-inline: clamp(1.5rem, 4vw, 4rem);
+    }
 }
 
 /* Brand and team rows */
@@ -923,7 +933,7 @@ footer a:hover {
 
 .about-eyebrow {
     margin-bottom: 0.75rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--muted-text);
@@ -952,7 +962,7 @@ footer a:hover {
 /* Maroon pill heading, same colours as the homepage button */
 .faq-pill {
     display: block;
-    max-width: 560px;
+    max-width: 600px;
     margin: 0 auto 1.25rem;
     padding: 0.35rem 1.5rem;
     border-radius: 999px;
