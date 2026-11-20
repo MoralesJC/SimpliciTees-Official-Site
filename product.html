@@ -21,10 +21,9 @@
 
     <!-- Light and dark theme (same file as shop.html) -->
     <script src="js/usertheme.js"></script>
-
 </head>
 
-<body>
+<body class="product-page">
 
    <!-- 
     ============================= NAVBAR =============================
@@ -59,9 +58,9 @@
                 <!-- Navbar drawer content (Replace # with respective html file) -->
                 <div class="drawer-body">
                     <ul class="nav navbar-nav md:ms-auto">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html"> Home </a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
-                        <li class="nav-item"><a class="nav-link" href="shop.html"> Shop </a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="shop.html"> Shop </a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
                     </ul>
                 </div>
@@ -70,186 +69,193 @@
     </nav>
 
     <!-- PRODUCT SECTION -->
-    <main class="product-preview">
+    <main class="product-preview container">
 
-        <div class="row g-4 align-items-center">
+        <div class="row g-4 lg:g-8 align-items-start">
 
-            <!-- IMAGE -->
-            <div class="col-12 col-lg-6">
+            <!-- IMAGE GALLERY: large image with arrows, thumbnails below -->
+            <div class="col-12 lg:col-6">
 
                 <div class="product-image-preview">
+                    <figure class="product-slide">
+                        <img src="images/products/dont_be_late.png" class="product-image" alt="Don't Be Late T-shirt">
+                    </figure>
+                    <!-- Slides 2 and 3 are placeholders. Replace the src with real photos. -->
+                    <figure class="product-slide" hidden>
+                        <img src="images/placeholder_light.jpg" class="product-image display-light" alt="Placeholder for a second view of the Don't Be Late T-shirt">
+                        <img src="images/placeholder_dark.jpg" class="product-image display-dark" alt="Placeholder for a second view of the Don't Be Late T-shirt">
+                    </figure>
+                    <figure class="product-slide" hidden>
+                        <img src="images/placeholder_light.jpg" class="product-image display-light" alt="Placeholder for a third view of the Don't Be Late T-shirt">
+                        <img src="images/placeholder_dark.jpg" class="product-image display-dark" alt="Placeholder for a third view of the Don't Be Late T-shirt">
+                    </figure>
 
-                    <img
-                        src="images/dontbelate.png"
-                        class="product-image"
-                        alt="Don't Be Late T-Shirt">
+                    <button type="button" class="carousel-btn carousel-prev" id="prevSlide" aria-label="Previous image">&lsaquo;</button>
+                    <button type="button" class="carousel-btn carousel-next" id="nextSlide" aria-label="Next image">&rsaquo;</button>
+                </div>
 
+                <div class="product-thumbs" role="group" aria-label="Choose a product image">
+                    <button type="button" class="product-thumb" aria-label="Show image 1">
+                        <img src="images/products/dont_be_late.png" alt="">
+                    </button>
+                    <button type="button" class="product-thumb" aria-label="Show image 2">
+                        <img class="display-light" src="images/placeholder_small_light.jpg" alt="">
+                        <img class="display-dark" src="images/placeholder_small_dark.jpg" alt="">
+                    </button>
+                    <button type="button" class="product-thumb" aria-label="Show image 3">
+                        <img class="display-light" src="images/placeholder_small_light.jpg" alt="">
+                        <img class="display-dark" src="images/placeholder_small_dark.jpg" alt="">
+                    </button>
                 </div>
 
             </div>
 
             <!-- INFORMATION -->
-                <div class="col-12 col-lg-6 product-information">
+            <div class="col-12 lg:col-6 product-information">
 
-                    <p class="breadcrumb">
-                        SHOP &gt; DON'T BE LATE TEE
-                    </p>
+                <p class="product-breadcrumb"><a href="shop.html">Shop</a> &rsaquo; <span aria-current="page">Don't Be Late Tee</span></p>
 
-                    <h1>Don't Be Late Tee</h1>
+                <h1>Don't Be Late Tee</h1>
 
-                    <h4>₱499.00</h4>
+                <!-- Static text for the mockup. There is no review system behind it. -->
+                <p class="product-rating">
+                    <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="visually-hidden">Rated 4 out of 5 stars.</span>
+                    (11 reviews)
+                </p>
 
-                    <p class="shipping info">
-                        Shipping is calculated at checkout.
-                    </p>
+                <h4 class="product-price">&#8369;499.00</h4>
 
-                    <p class="description">
-                        A comfortable and stylish T-shirt perfect
-                        for everyday wear.
-                    </p>
-                </div>
+                <p class="shipping-info">
+                    <a href="#shippingDetails" id="shippingLink">Shipping</a> is calculated at checkout.
+                </p>
 
-        <!-- COLOR OPTIONS -->
-        <fieldset class="mb-7">
-            <legend class="option-label">Colour</legend>
-            <div class="d-flex flex-wrap gap-1">
-                <!-- Will adjust the hex codes as needed. -->
-                <label class="colour-swatch" style="background-color: #ffffff;">
-                    <input type="radio" class="visually-hidden" name="colour" value="White" checked>
-                    <span class="visually-hidden">White</span>
-                </label>
-                
-                <label class="colour-swatch" style="background-color: #454040;">
-                    <input type="radio" class="visually-hidden" name="colour" value="Charcoal">
-                    <span class="visually-hidden">Charcoal</span>
-                </label>
-        
-                <label class="colour-swatch" style="background-color: #4a3520;">
-                    <input type="radio" class="visually-hidden" name="colour" value="Brown">
-                        <span class="visually-hidden">Brown</span>
-                </label>
-            </div>
-        </fieldset>
+                <!-- COLOR OPTIONS -->
+                <fieldset class="mb-7">
+                    <legend class="option-label">Color: <span class="option-value" id="colourName">Warm Sand</span></legend>
+                    <div class="d-flex flex-wrap gap-3">
+                        <label class="colour-swatch" style="background-color: #ffffff;">
+                            <input type="radio" class="visually-hidden" name="colour" value="White">
+                            <span class="visually-hidden">White</span>
+                        </label>
+                        <label class="colour-swatch" style="background-color: #e3d8c2;">
+                            <input type="radio" class="visually-hidden" name="colour" value="Warm Sand" checked>
+                            <span class="visually-hidden">Warm Sand</span>
+                        </label>
+                        <label class="colour-swatch" style="background-color: #c4d0c0;">
+                            <input type="radio" class="visually-hidden" name="colour" value="Sage">
+                            <span class="visually-hidden">Sage</span>
+                        </label>
+                    </div>
+                </fieldset>
 
+                <!-- SIZE OPTIONS -->
+                <fieldset class="mb-7">
+                    <legend class="option-label">Size</legend>
+                    <div class="d-flex flex-wrap gap-3">
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XS" checked>XS</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="S">S</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="M">M</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="L">L</label>
+                        <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XL">XL</label>
+                    </div>
+                </fieldset>
 
-        <!-- SIZE OPTIONS -->
-        <fieldset class="mb-7">
-        <legend class="option-label">Size</legend>
-            <div class="d-flex flex-wrap gap-3">
-                <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XS">XS</label>
-                <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="S">S</label>
-                <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="M" checked>M</label>
-                <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="L">L</label>
-                <label class="size-option"><input type="radio" class="visually-hidden" name="size" value="XL">XL</label>
-            </div>
-        </fieldset>
-
-        <!-- QUANTITY -->
-        <div class="mb-7">
-            <label class="option-label" for="quantity">Quantity</label>
-            <div class="qty-stepper">
-                <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
-                <input type="number" id="quantity" value="1" min="1" max="10">
-                <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
-            </div>
-        </div>
-    
-        <!-- BUY NOW 
-         This is a mailto link, since the button should open the user's email client-->
-            <div class="buynow-button">
-                <a
-                        class="btn btn-primary buy-now"
-                        id="buyNow"
-                        href="mailto:orders@examplewebsite142.com"
-                        aria-label="Buy now button, opens your default email app with order details">
-                        BUY NOW
-                    </a>
-            </div>
-
-    <!-- Mailto button script -->
-    <script src="js/mailto.js" defer></script>
-
-                    <!-- Shown after BUY NOW is clicked, in case no email app opens -->
-                    <div class="mail-notice" id="mailNotice" role="status" hidden>
-                        <p class="mb-3">
-                            Your email app should now be open with your order ready to send to
-                            <a href="mailto:orders@examplewebsite142.com">orders@examplewebsite142.com</a>.
-                            Add your name, mobile number, and delivery address, then press Send.
-                        </p>
-                        <p class="mb-3">
-                            Nothing opened? Copy the order below and email it to the address above.
-                        </p>
-                        <label class="visually-hidden" for="orderText">Order details</label>
-                        <textarea class="form-control mb-3" id="orderText" rows="9" readonly></textarea>
-                        <button type="button" class="btn-outline theme-secondary" id="copyOrder">Copy order details</button>
-                        <span class="fs-sm ms-3" id="copyStatus" role="status"></span>
+                <!-- QUANTITY -->
+                <div class="mb-9">
+                    <label class="option-label" for="quantity">Quantity</label>
+                    <div class="qty-stepper">
+                        <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
                     </div>
                 </div>
+
+                <!-- BUY NOW: a mailto link, so it opens the customer's email app -->
+                <a class="buy-now"
+                   id="buyNow"
+                   href="mailto:orders@examplewebsite142.com"
+                   aria-label="Buy now. Opens your email app with your order details">
+                    BUY NOW
+                </a>
+
+                <!-- Shown after BUY NOW is clicked, in case no email app opens -->
+                <div class="mail-notice" id="mailNotice" role="status" hidden>
+                    <p class="mb-3">
+                        Your email app should now be open with your order ready to send to
+                        <a href="mailto:orders@examplewebsite142.com">orders@examplewebsite142.com</a>.
+                        Add your name, mobile number, and delivery address, then press Send.
+                    </p>
+                    <p class="mb-3">Nothing opened? Copy the order below and email it to the address above.</p>
+                    <label class="visually-hidden" for="orderText">Order details</label>
+                    <textarea class="form-control mb-3" id="orderText" rows="9" readonly></textarea>
+                    <button type="button" class="btn-copy" id="copyOrder">Copy order details</button>
+                    <span class="fs-sm ms-3" id="copyStatus" role="status"></span>
+                </div>
+
+                <!-- ABOUT, CARE GUIDE, SHIPPING, RETURNS -->
+                <section class="faq-list" aria-label="Product information">
+                    <details class="faq-item" open>
+                        <summary>About This Design</summary>
+                        <div class="faq-body"><p>A comfortable and stylish T-shirt perfect for everyday wear.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Care Guide</summary>
+                        <div class="faq-body">
+                            <ul>
+                                <li>Machine wash cold (30 to 40 &deg;C), inside out, with like colors</li>
+                                <li>Do not dry clean or bleach</li>
+                                <li>Do not tumble dry</li>
+                                <li>Iron on reverse, if needed</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="faq-item" id="shippingDetails">
+                        <summary>Shipping</summary>
+                        <div class="faq-body"><p>Orders are processed within 2 business days. Shipping fees are calculated at checkout. Sales tax may apply depending on your location. For international shipping, we cannot guarantee delivery timing due to customs clearance.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Returns</summary>
+                        <div class="faq-body"><p>Don't love your SimpliciTees shirt? We accept returns within 30 days of purchase. Item must be unworn and in its original packaging. For international returns, we charge 20 USD to cover shipping and restocking. Duties and taxes are not refunded for international returns.</p></div>
+                    </details>
+                </section>
+
             </div>
-
         </div>
-
-        <!-- CARE GUIDE, SHIPPING, RETURNS -->
-        <section class="faq-list mt-12" aria-label="Product information">
-            <details class="faq-item">
-                <summary>Care Guide</summary>
-                <div class="faq-body">
-                <ul>
-                    <li>Machine wash cold (30 to 40 °C), inside out, with like colors</li>
-                    <li>Do not dry clean or bleach</li>
-                    <li>Do not tumble dry</li>
-                    <li>Iron on reverse, if needed</li>
-                </ul>
-                </div>    
-            </details>
-            <details class="faq-item" id="shippingDetails">
-                <summary>Shipping</summary>
-                <div class="faq-body"><p>Orders are processed within 2 business days. Shipping fees are calculated at checkout. Sales tax may apply depending on your location. For international shipping, we cannot guarantee delivery timing due to customs clearance.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>Returns</summary>
-                <div class="faq-body"><p>Don't love your SimpliciTees shirt? We accept returns within 30 days of purchase. Item must be unworn and in its original packaging. For international returns, we charge 20 USD to cover shipping and restocking. Duties and taxes are not refunded for international returns.</p></div>
-            </details>
-        </section>
 
         <!-- YOU MAY ALSO LIKE SECTION -->
-    <section class="mt-5 pt-4" aria-labelledby="alsoLikeHeading">
-        <h2 class="also-like-heading mb-4" id="alsoLikeHeading">You may also like</h2>
+        <section class="also-like" aria-labelledby="alsoLikeHeading">
+            <h2 class="also-like-heading mb-6" id="alsoLikeHeading">You may also like</h2>
 
-    <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card text-center h-100 border-0 bg-transparent related-card">
-                <a href="#" class="text-decoration-none text-reset related-card-link">
-                    <div class="related-image-box">
-                        <img class="display-light img-fluid" src="images/placeholder_light.jpg" alt="" aria-hidden="true">
-                        <img class="display-dark img-fluid" src="images/placeholder_dark.jpg" alt="" aria-hidden="true">
-                    </div>
-                    <div class="card-body px-2 pt-3 pb-0">
-                        <h3 class="related-title">Everyday Comfort Tee</h3>
-                        <p class="related-desc mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit tempore accusamus quo aute est aut in et excepturi ullamco assumenda dolorum.</p>
-                    </div>
-                </a>
-            </article>
-        </div>
+            <div class="row g-6">
+                <!-- Card 1 -->
+                <div class="col-6 md:col-3">
+                    <article class="related-card">
+                        <a href="shop.html" class="related-card-link text-decoration-none text-reset">
+                            <div class="related-image-box">
+                                <img class="display-light" src="images/placeholder_light.jpg" alt="" aria-hidden="true">
+                                <img class="display-dark" src="images/placeholder_dark.jpg" alt="" aria-hidden="true">
+                            </div>
+                            <h3 class="related-title">Everyday Comfort Tee</h3>
+                            <p class="related-desc">A lighthearted nod to busy schedules. Breathable white cotton topped with an artistic green print that keeps your look fresh on the fly.</p>
+                        </a>
+                    </article>
+                </div>
 
-        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card text-center h-100 border-0 bg-transparent related-card">
-                <a href="#" class="text-decoration-none text-reset related-card-link">
-                    <div class="related-image-box">
-                        <img class="display-light img-fluid" src="images/placeholder_light.jpg" alt="" aria-hidden="true">
-                        <img class="display-dark img-fluid" src="images/placeholder_dark.jpg" alt="" aria-hidden="true">
-                    </div>
-                    <div class="card-body px-2 pt-3 pb-0">
-                        <h3 class="related-title">Do Good Work Tee</h3>
-                        <p class="related-desc mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit tempore accusamus quo aute est aut in et excepturi ullamco assumenda dolorum.</p>
-                    </div>
-                </a>
-            </article>
-        </div>
-    </div>
-    </section>
+                <!-- Card 2 -->
+                <div class="col-6 md:col-3">
+                    <article class="related-card">
+                        <a href="shop.html" class="related-card-link text-decoration-none text-reset">
+                            <div class="related-image-box">
+                                <img src="images/products/do_good_work.png" alt="">
+                            </div>
+                            <h3 class="related-title">Do Good Work Tee</h3>
+                            <p class="related-desc">Understated motivation you can wear. Deep black fabric accented with a clean pocket-sized motif for low-key daily hustle.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER: pasted the <footer> block from Josh's index.html -->
@@ -331,7 +337,9 @@
 
     <!-- Bootstrap 6 JS -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-    
+
+    <!-- Mailto button script -->
+    <script src="js/mailto.js" defer></script>
 </body>
 </html>
 
