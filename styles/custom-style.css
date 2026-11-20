@@ -15,18 +15,18 @@ html::-webkit-scrollbar {
 /* Global theme variable overrides */
 :root {
     /* Theme colors */
-    --bs-bg-body: light-dark(#ffffff, #000000);
-    --bs-fg-body: light-dark(#000000, #e0e0e0);
+    --bs-bg-body: light-dark(#f5f2e9, #1e180d);
+    --bs-fg-body: light-dark(#0d1b1e, #b2ad9d);
 
     /* Typography */
     --bs-body-font-family: "Work Sans", Arial, sans-serif;
     --heading-font-family: "DM Sans", Arial, sans-serif;
 
     /* Navbar */
-    --bs-navbar-bg: light-dark(#e6e6e6, #191919);
-    --navbar-color: light-dark(#696969, #989898);
-    --navbar-active-color: light-dark(#000000, #e0e0e0);
-    --navbar-hover-color: light-dark(#282828, #d5d5d5);
+    --bs-navbar-bg: light-dark(#f5f2e9, #1e180d);
+    --navbar-color: light-dark(#0d1b1e, #b2aD9d);
+    --navbar-active-color: light-dark(#0d1b1e, #b2aD9d);
+    --navbar-hover-color: light-dark(#736855, #dfd7bd);
 
     /* Footer */
     --footer-color: light-dark(#e6e6e6, #989898);
@@ -106,12 +106,13 @@ header {
 }
 
 header .btn-primary {
-    color: light-dark( #ffffff, #000000);
-    background-color: light-dark( #434343, #bcbcbc);
+    color: light-dark( #fff4f2, #b2ad9d);
+    background-color: light-dark( #6f1a07, #531304);
+    font-weight: 500;
 }
 
 .home-hero .container-fluid {
-    background-color: light-dark( #f8f9fc, #0e0e0e);
+    background-color: light-dark( #fffdf8, #262116);
 }
 
 .home-hero-title {
