@@ -15,6 +15,9 @@
             return document.querySelector('input[name="' + name + '"]:checked').value;
         }
 
+        // Colours
+        document.getElementById("colourName").textContent = colour;
+
         // Keeps the quantity between the minimum and maximum
         function updateQuantity() {
             let qty = parseInt(qtyInput.value, 10);
