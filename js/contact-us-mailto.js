@@ -1,28 +1,17 @@
-const TO_ADDRESS = "hello@examplewebsite142.com";
+const contactForm = document.getElementById("contact-form");
 
-const form = document.querySelector("#contact-form");
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-function buildMailto() {
-    const name = document.querySelector("#full-name").value;
-    const email = document.querySelector("#email").value;
-    const topic = document.querySelector("#topic").value;
-    const text = document.querySelector("#message").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-    const subject = "Website message: " + topic;
+  const subject = encodeURIComponent(Website inquiry from ${name});
+  const body = encodeURIComponent(
+    Name: ${name}\nEmail: ${email}\n\nMessage:\n${message},
+  );
 
-    const body =
-        "Name: " + name + "\r\n" +
-        "Email: " + email + "\r\n\r\n" +
-        text;
-
-    return (
-        "mailto:" + TO_ADDRESS +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body)
-    );
-}
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    window.location.href = buildMailto();
+  window.location.href =
+    mailto:hello@examplewebsite142.com?subject=${subject}&body=${body};
 });
