@@ -824,3 +824,76 @@ footer a:hover {
         transition: none;
     }
 }
+
+
+
+
+/* --------------------------- Terms and Privacy Policy --------------------------- */
+
+/* Colour variables for the legal pages. The FAQ dropdown styles above use
+   --line-color and --muted-text, which are otherwise only set on .product-page. */
+   
+.legal-page {
+    --line-color: light-dark(#808080, #5a5a5a);
+    --muted-text: light-dark(#5a5a5a, #a5a5a5);
+    --brand-tan: #A8763E;
+    --brand-tan-soft: light-dark(#F5F2E9, #2a2620);
+    color: var(--bs-fg-body);
+    max-width: 820px;
+    padding-block: 3rem 5rem;
+}
+
+.legal-page h1,
+.legal-page h2,
+.legal-page h3 {
+    font-family: var(--heading-font-family);
+    color: inherit;
+}
+
+.legal-page h1 {
+    font-weight: 700;
+    font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.legal-intro h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.legal-page a {
+    color: var(--brand-maroon, light-dark(#6F1A07, #d9876f));
+}
+
+/* Expand all / Collapse all button (reuses .btn-copy) */
+.legal-toggle {
+    margin-top: 1rem;
+}
+
+/* Section titles in the dropdowns */
+.legal-page .faq-item summary {
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/*  Legal sections with several paragraphs */
+.legal-page .faq-body p,
+.legal-page .faq-body ul,
+.legal-page .faq-body ol,
+.legal-page .faq-body address {
+    margin-bottom: 1rem;
+}
+
+.legal-page .faq-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1.25rem;
+}
+
+/* "In Short" summaries on the Privacy Policy */
+.in-short {
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--brand-tan);
+    background-color: var(--brand-tan-soft);
+}
