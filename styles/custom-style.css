@@ -29,7 +29,7 @@ html::-webkit-scrollbar {
     --navbar-hover-color: light-dark(#736855, #dfd7bd);
 
     /* Footer */
-    --footer-color: light-dark(#e6e6e6, #989898);
+    --footer-color: light-dark(#e8e8e8, #b2ad9d);
     --footer-hover-color: light-dark(#ffffff, #d5d5d5);
 }
 
@@ -55,6 +55,15 @@ a, .a {
 }
 
 /* ============================= NAVBAR ============================= */
+
+.navbar {
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.navbar-scrolled {
+  background-color: light-dark(#ffffff, #0e0d0c);
+  box-shadow: 0 2px 12px light-dark(rgba(13, 27, 30, 0.08), rgba(0, 0, 0, 0.45));
+}
 
 .navbar-brand img{
     height: 50px;
@@ -112,7 +121,7 @@ header .btn-primary {
 }
 
 .home-hero .container-fluid {
-    background-color: light-dark( #fffdf8, #262116);
+    background-color: light-dark(#fffdf8, #262116);
 }
 
 .home-hero-title {
@@ -128,16 +137,20 @@ header .btn-primary {
 .shop-hero {
     width: 100%;
     min-height: 400px;
-    background-color: #000000;
+    background-color: light-dark(#63543e, #1f1506);
 }
 
 .shop-hero-title {
+    color: light-dark(#ffffff, #b2ad9d);
     font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    text-align: center;
 }
 
 .shop-hero-description {
+    color: light-dark(#ffffff, #b2ad9d);
     font-size: clamp(0.6rem, 1.6vw, 1.05rem);
     letter-spacing: 0.15em;
+    text-align: center;
 }
 
 /* --------------------------- Privacy Policy --------------------------- */
@@ -168,16 +181,37 @@ header .btn-primary {
     margin-top: clamp(5rem, 8vw, 10rem);
 }
 
+.ratings {
+    color: light-dark(#a8763e, #785024);
+}
+
 /* --------------------------- Homepage --------------------------- */
 
 /* Featured Shirts Section */
+
+.fs-section {
+    background-color: light-dark(#ffffff, #0e0d0c);
+}
 
 .fs-border-color {
     border-color: light-dark( #f2f4fC, #1f1f1f);
 }
 
+.fs-border-color:hover {
+    transition: border-color 0.85s ease;
+    border-color: light-dark( #6f1a07, #531304);
+}
+
+.fs-img-bg {
+    background-color: light-dark(#eae8e8, #151717);
+}
+
+.fs-card-bg {
+    background-color: light-dark(#ffffff, #0e0d0c);
+}
+
 .home-fs-subtitle {
-    color: light-dark( #5a5a5a, #a5a5a5);
+    color: light-dark( #0d1b1e, #b2ad9d);
     font-size: clamp(0.8rem, 1.4vw, 1.1rem);
     letter-spacing: 0.15em;
 }
@@ -194,38 +228,44 @@ header .btn-primary {
     padding-top: 1rem;
     padding-bottom: 1rem;
     opacity: 0.45;
-    transition: opacity 0.25s ease, border-color 0.25s ease;
+    transition: opacity 0.75s ease, border-color 0.25s ease;
     cursor: pointer;
 }
 
-/* 1. Default active state (for the first item) when nothing in the list is hovered */
+/* Default active state (for the first item) when nothing in the list is hovered */
 .feature-list:not(:has(.feature-item:hover)) .feature-item:first-child,
   
 /* Active state for whichever item is currently being hovered */
 .feature-item:hover {
     opacity: 1;
-    border-left-color: #4a4a4a;
+    border-left-color: light-dark( #6f1a07, #531304);
 }
 
 /* Customer Reviews Section */
 
-.cr-bg-color {
-    background-color: light-dark( #f8f9fc, #0e0e0e);
-}
-
 .cr-card-color {
-    background-color: light-dark( #e6e6e6, #191919);
+    background-color: light-dark( #ffffff, #262116);
 }
 
 .cr-text-color {
-    color: light-dark( #5a5a5a, #a5a5a5);
+    color: light-dark( #0d1b1e, #b2ad9d);
+}
+
+.cr-card-shape {
+    max-width: 500px;  
+    width: 100%;
+    margin-inline: auto;
 }
 
 /* ============================= FOOTER ============================= */
 
 footer {
     color: var(--footer-color);
-    background-color: light-dark( #666666, #0e0e0e);
+    background-color: light-dark( #0d1b1e, #0e0e0e);
+}
+
+.footer-border-custom {
+    border-color: var(--footer-color);
 }
 
 footer a{
@@ -234,6 +274,11 @@ footer a{
 
 footer a:hover {
     color: var(--footer-hover-color);
+}
+
+.footer-social-btn {
+    background-color: light-dark(#e8e8e8, #b2ad9d);
+    color: light-dark(#0d1b1e, #0e0d0c);
 }
 
 /* ============================= MEDIA QUERIES ============================= */
@@ -266,8 +311,6 @@ footer a:hover {
         min-height: 550px;
     }
 }
-
-
 
 /* --------------------------- Product Page --------------------------- */
 
