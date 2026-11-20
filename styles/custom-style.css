@@ -830,9 +830,7 @@ footer a:hover {
 
 /* --------------------------- Terms and Privacy Policy --------------------------- */
 
-/* Colour variables for the legal pages. The FAQ dropdown styles above use
-   --line-color and --muted-text, which are otherwise only set on .product-page. */
-   
+  
 .legal-page {
     --line-color: light-dark(#808080, #5a5a5a);
     --muted-text: light-dark(#5a5a5a, #a5a5a5);
