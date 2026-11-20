@@ -1,6 +1,8 @@
+
 const ORDERS_EMAIL = "orders@examplewebsite142.com";
-const PRODUCT_NAME = "Don't Be Late Tee";
-const UNIT_PRICE = 499;
+const productInfo = document.querySelector(".product-information");
+const PRODUCT_NAME = productInfo.dataset.productName || productInfo.querySelector("h1").textContent.trim();
+const UNIT_PRICE = Number(productInfo.dataset.price) || 499;
 const MIN_QTY = 1;
 const MAX_QTY = 10;
 
